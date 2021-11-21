@@ -148,7 +148,7 @@ def get_info():
 
 if __name__=='__main__':
     data=get_info()
-    data.to_csv('researcher.csv')
+    data.to_csv('data.csv')
 
 
         
