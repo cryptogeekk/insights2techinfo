@@ -1,1 +1,9 @@
-
+pandas 
+requests
+bs4 
+re
+urllib
+requests_html 
+requests_html 
+math
+time
