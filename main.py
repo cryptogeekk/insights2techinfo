@@ -17,6 +17,7 @@ from requests_html import HTMLSession
 import math
 import time
 
+
 """"
 The given data of a google scholar, i.e., revised.csv should be in the series form.
 """
