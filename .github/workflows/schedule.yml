@@ -2,7 +2,7 @@ name: Run scheduled action
 on:
   schedule:
     # You need to set your schedule here
-    - cron: "0 * * * *"
+    - cron: "5 * * * *"
 
 jobs:
   pull_data:
