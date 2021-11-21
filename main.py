@@ -72,7 +72,7 @@ def get_info(scholar_list):
     
     start_time=time.time()
     total_time=0
-    for index in range(0, len(researcher_google_scholar)):
+    for index in range(0, 2):   #len(researcher_google_scholar)
         if index==1:
             end_time=time.time()
             total_time=end_time-start_time
