@@ -31,9 +31,9 @@ jobs:
       # NOTE: This commits everything in the `data` directory. Make sure this matches your needs
       - name: Git commit
         run: |
-          git add main
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git add .
+          git config --local user.email "krishna_11822003@nitkkr.ac.in"
+          git config --local user.name "cryptogeekk"
           git commit -m "Commiting data"
 
       # NOTE: Check that your branch name is correct here
