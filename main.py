@@ -94,7 +94,7 @@ def get_info(scholar_list):
             # r=requests.get('https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjN45nao5_0AhXHZCsKHVO0DVwQFnoECAUQAQ&url=https%3A%2F%2Fscholar.google.com.sg%2Fcitations%3Fuser%3D8FjY99sAAAAJ%26hl%3Den&usg=AOvVaw3yXEa03OHOn9TsDNJYyXSH')
             
             r=requests.get(researcher_google_scholar[index])
-            soup=BeautifulSoup(r.content, 'html5lib')
+            soup=BeautifulSoup(r.content, 'html.parser')
             for info1 in soup.find_all('td', class_='gsc_rsb_std'):
                 info_first.append(info1.text)
             
