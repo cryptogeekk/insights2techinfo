@@ -13,7 +13,7 @@
 }
 
 .mystyle tr:nth-child(even) {
-    background: #E0E0E0;
+    background: #dddada;
 }
 
 .mystyle tr:hover {
