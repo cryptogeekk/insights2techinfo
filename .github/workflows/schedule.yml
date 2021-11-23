@@ -27,6 +27,10 @@ jobs:
       # If using Python:
       - name: Pull data
         run: python3 main.py
+        
+            # If using Python:
+      - name: print output_html
+        run: python3 app.py
 
       # NOTE: This commits everything in the `data` directory. Make sure this matches your needs
       - name: Git commit
