@@ -17,7 +17,7 @@ def print_output_html():
     <html>
     <head><title>Researcher List</title>
     <h1>Highly Cited Computer Science Researcher According to WoS 2021</h1>
-    <p>Dataset last updated on $code</p>
+    <p>This is an automated dataset, which updates every 24 hours. <br>Dataset last updated on $code</p>
     <p>The original list published by WoS only contains few metrics such as name, affillation. 
     But in our database we have used ten different metrics to make researchers information more informative.
     </p>
