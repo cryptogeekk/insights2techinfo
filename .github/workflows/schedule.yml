@@ -1,0 +1,44 @@
+name: Run scheduled action
+on:
+  schedule:
+    # You need to set your schedule here
+    - cron: "0 0 * * *"
+
+jobs:
+  pull_data:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      # If using Python:
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+
+      # If using Python:
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # If using Python:
+      - name: Pull data
+        run: python3 main.py
+
+      # NOTE: This commits everything in the `data` directory. Make sure this matches your needs
+      - name: Git commit
+        run: |
+          git add .
+          git config --local user.email "krishna_11822003@nitkkr.ac.in"
+          git config --local user.name "cryptogeekk"
+          git commit -m "Commiting data"
+
+      # NOTE: Check that your branch name is correct here
+      - name: Git push
+        run: |
+          git push "https://${GITHUB_ACTOR}:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
